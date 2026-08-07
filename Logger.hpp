@@ -5,6 +5,7 @@
 
 class Logger {
     private:
+        static TIME_POINT startTime; 
     public:
         static void logLocation(const std::string message,
                                 const std::string& file,
@@ -17,3 +18,5 @@ class Logger {
 
 // Macros for easy usage
 #define LOG_LOCATION(msg) Logger::logLocation(msg, __FILE__, __LINE__, __FUNCTION__)
+#define START_TIMER() Logger::startTimer()
+#define STOP_TIMER() Logger::stopTimer(__FUNCTION__)

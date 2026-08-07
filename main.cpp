@@ -1,7 +1,7 @@
 #include <iostream>
 #include "values.hpp"
 #include "Logger.hpp"
-#inlcude "mode.hpp"
+#include "mode.hpp"
 #include "Algorithms.hpp"
 
 int main() {

@@ -13,5 +13,4 @@
 #define TIME_POINT std::chrono::high_resolution_clock::time_point
 #define NOW std::chrono::high_resolution_clock::now()
 #define DURATION(start, end) std::chrono::duration_cast<std::chrono::microseconds>((end) - (start)).count()
-
-
+#define DEBUG_MODE

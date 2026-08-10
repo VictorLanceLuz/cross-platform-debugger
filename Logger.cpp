@@ -19,4 +19,15 @@ void Logger::stopTimer(const std::string &function)
 
 void Logger::printCompileInfo()
 {
+    std::cout << "Date: " << __DATE__ << std::endl;
+    std::cout << "Time: " << __TIME__ << std::endl;
+    std::cout << "Compiler: ";
+    #ifdef __GNUC__
+        std::cout << "GCC " << __GNUC__ << "." << __GNUC_MINOR__ << std::endl;
+    #elif defined(__clang__)
+        std::cout << "Clang " << __clang_major__ << "." << __clang_minor__ << std::endl;
+    #elif defined(_MSC_VER) 
+        std::cout << "MSVC " << _MSC_VER << std::endl;
+    #endif
+    std::cout << PLATFORM << std::endl;
 }

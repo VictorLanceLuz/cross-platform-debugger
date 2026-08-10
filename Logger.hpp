@@ -20,3 +20,8 @@ class Logger {
 #define LOG_LOCATION(msg) Logger::logLocation(msg, __FILE__, __LINE__, __FUNCTION__)
 #define START_TIMER() Logger::startTimer()
 #define STOP_TIMER() Logger::stopTimer(__FUNCTION__)
+#ifdef DEBUG_MODE
+    #define COMPILE_INFO() Logger::printCompileInfo()
+#else
+    #define COMPILE_INFO() // to keep it defined, but call nothing.
+#endif
